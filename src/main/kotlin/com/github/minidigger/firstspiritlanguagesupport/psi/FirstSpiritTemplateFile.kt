@@ -8,7 +8,7 @@ import com.intellij.psi.FileViewProvider
 import org.jetbrains.annotations.NotNull
 
 class FirstSpiritTemplateFile(@NotNull viewProvider: FileViewProvider) :
-    PsiFileBase(viewProvider, FirstSpiritTemplateLanguage.instance) {
+        PsiFileBase(viewProvider, FirstSpiritTemplateLanguage.instance) {
 
     @NotNull
     override fun getFileType(): FileType {

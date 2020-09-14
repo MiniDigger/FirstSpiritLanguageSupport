@@ -11,11 +11,15 @@ import com.intellij.psi.TokenType
 import com.intellij.psi.tree.IElementType
 import org.jetbrains.annotations.NotNull
 
-val FSKEYWORD: TextAttributesKey = createTextAttributesKey("FIRSTSPIRIT_KEYWORD", DefaultLanguageHighlighterColors.KEYWORD)
+val FSKEYWORD: TextAttributesKey = createTextAttributesKey("FIRSTSPIRIT_KEYWORD",
+        DefaultLanguageHighlighterColors.KEYWORD)
 val NON_FS: TextAttributesKey = createTextAttributesKey("NON_FIRSTSPIRIT")
-val STRING: TextAttributesKey = createTextAttributesKey("FIRSTSPIRIT_STRING", DefaultLanguageHighlighterColors.STRING)
-val COMMENT: TextAttributesKey = createTextAttributesKey("FIRSTSPIRIT_COMMENT", DefaultLanguageHighlighterColors.BLOCK_COMMENT)
-val BRACKET: TextAttributesKey = createTextAttributesKey("FIRSTSPIRIT_BRACKET", DefaultLanguageHighlighterColors.BRACKETS)
+val STRING: TextAttributesKey = createTextAttributesKey("FIRSTSPIRIT_STRING",
+        DefaultLanguageHighlighterColors.STRING)
+val COMMENT: TextAttributesKey = createTextAttributesKey("FIRSTSPIRIT_COMMENT",
+        DefaultLanguageHighlighterColors.BLOCK_COMMENT)
+val BRACKET: TextAttributesKey = createTextAttributesKey("FIRSTSPIRIT_BRACKET",
+        DefaultLanguageHighlighterColors.BRACKETS)
 
 val BAD_CHARACTER: TextAttributesKey = createTextAttributesKey("FIRSTSPIRIT_BAD_CHARACTER")
 
