@@ -58,6 +58,9 @@ intellij {
 //  setPlugins("java")
 }
 
+// also consider generated code
+sourceSets["main"].java.srcDirs("src/main/gen")
+
 // Configure detekt plugin.
 // Read more: https://detekt.github.io/detekt/kotlindsl.html
 detekt {

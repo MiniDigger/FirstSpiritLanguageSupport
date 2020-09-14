@@ -8,12 +8,29 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.minidigger.firstspiritlanguagesupport.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.minidigger.firstspiritlanguagesupport.services.MyProjectService"/>
-    </extensions>
+        <fileType name="FirstSpiritTemplate"
+                  implementationClass="com.github.minidigger.firstspiritlanguagesupport.FirstSpiritTemplateFileType"
+                  fieldName="INSTANCE" language="FirstSpiritTemplate" extensions="fstemplate"/>
 
-    <projectListeners>
-        <listener class="com.github.minidigger.firstspiritlanguagesupport.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </projectListeners>
+        <lang.parserDefinition language="FirstSpiritTemplate"
+                               implementationClass="com.github.minidigger.firstspiritlanguagesupport.parser.FirstSpiritTemplateParserDefinition"/>
+
+        <lang.syntaxHighlighterFactory language="FirstSpiritTemplate"
+                                       implementationClass="com.github.minidigger.firstspiritlanguagesupport.syntax.FirstSpiritTemplateSyntaxHighlighterFactory"/>
+
+        <lang.braceMatcher language="FirstSpiritTemplate"
+                           implementationClass="com.github.minidigger.firstspiritlanguagesupport.syntax.FirstSpiritTemplatePairedBraceMatcher"/>
+
+        <lang.commenter language="FirstSpiritTemplate"
+                        implementationClass="com.github.minidigger.firstspiritlanguagesupport.completer.FirstSpiritTemplateCommenter"/>
+
+        <lang.formatter language="FirstSpiritTemplate"
+                        implementationClass="com.github.minidigger.firstspiritlanguagesupport.formatter.FirstSpiritTemplateFormattingModelBuilder"/>
+
+        <colorSettingsPage
+                implementation="com.github.minidigger.firstspiritlanguagesupport.syntax.FirstSpiritTemplateColorSettingsPage"/>
+
+        <completion.contributor language="FirstSpiritTemplate"
+                                implementationClass="com.github.minidigger.firstspiritlanguagesupport.completer.FirstSpiritTemplateCompletionContributor"/>
+    </extensions>
 </idea-plugin>
